@@ -24,10 +24,6 @@ namespace ParcelLineCL
         {
             try
             {
-                if(ParcelLineHelper.ValidateParcelPipeCommaStrInput(input) == false)
-                {
-                    return "Incorrect format of input. Please insert at least 3 positive numbers separted with comma!";
-                }
                 Parcel parcel = ParcelLineHelper.GetParcelFromCommaStrInput(input);
                 Pipe pipe = ParcelLineHelper.GetPipeFromCommaStrInput(input);
                 if (pipe.CanParcelFit(parcel) == false)
